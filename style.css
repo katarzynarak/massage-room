@@ -1,0 +1,83 @@
+body {
+	font-family: "Roboto", sans-serif;
+}
+#header {
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: hsl(200, 80%, 40%);
+	height: 130px;
+	width: 100%;
+	max-width: 1300px;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+}
+.logo {
+	max-width: 300px;
+	height: auto;
+	margin-left: -45px;
+}
+.rightside-header {
+	width: 100%;
+}
+.phone {
+	text-align: right;
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+}
+.icon {
+	margin-top: 20px;
+	margin-right: 5px;
+}
+.nav {
+	width: 600px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -25px;
+}
+.nav-ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.nav-li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: hsl(200, 80%, 35%);
+}
+.powitanie {
+	height: 500px;
+	max-width: 1300px;
+	display: flex;
+	flex-direction: row;
+	margin-left: auto;
+	margin-right: auto;
+}
+.powitanie-tekst {
+	color: hsl(0, 50%, 100%);
+	background-color: hsl(200, 80%, 35%);
+	font-size: 32px;
+	font-weight: 600;
+	text-align: center;
+	margin-top: 50px;
+	margin-left: 50px;
+	padding: 0 25px 0 25px;
+	position: absolute;
+	z-index: 2;
+}
+.powitanie-zdjecie {
+	position: absolute;
+	z-index: 1;
+}
+.zdjecie_masaz {
+	height: auto;
+	width: 1300px;
+	margin-left: auto;
+	margin-right: auto;
+	filter: brightness(0.8);
+}
