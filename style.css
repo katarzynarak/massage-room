@@ -131,37 +131,30 @@ table {
 body {
 	font-family: "Roboto", sans-serif;
 }
+/*style on a computer screen with width 1200px*/
+
+.container {
+	margin: 0 auto;
+	width: 1200px;
+	display: flex;
+}
 header {
 	font-size: 20px;
 	font-weight: 600;
 	text-transform: uppercase;
 	color: hsl(200, 80%, 40%);
+	background-color: hsl(0, 50%, 100%);
+	position: fixed;
+	top: 0px;
 	height: 130px;
-	width: 100%;
-	max-width: 1300px;
+	width: 1200px;
 	display: flex;
-	margin: 0 auto;
+	justify-content: space-between;
 }
 .logo {
 	max-width: 300px;
 	height: auto;
 	margin-left: -45px;
-}
-.right-side-header {
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-}
-.nav {
-	width: 600px;
-	margin: auto;
-}
-.nav ul {
-	display: flex;
-	justify-content: space-around;
-}
-.nav li {
-	list-style: none;
 }
 .phone-icon-container {
 	width: 45px;
@@ -174,14 +167,39 @@ header {
 .phone-icon:hover {
 	fill: hsl(200, 80%, 20%);
 }
+nav {
+	width: 60%;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	position: relative;
+}
+nav ul {
+	display: flex;
+	width: 80%;
+	padding-right: 10px;
+	justify-content: space-between;
+}
+.nav-button-line {
+	width: 32px;
+	height: 3px;
+	background-color: hsl(200, 80%, 40%);
+	margin: 6px;
+	border-radius: 20px;
+}
+.nav-button {
+	background-color: transparent;
+	border: none;
+	display: none;
+}
 a {
 	text-decoration: none;
 	color: hsl(200, 80%, 35%);
 }
 #welcome {
-	height: 500px;
-	max-width: 1300px;
-	margin: auto;
+	margin-top: 130px;
+	position: absolute;
+	z-index: -1;
 }
 .welcome-text {
 	color: hsl(0, 50%, 100%);
@@ -189,9 +207,10 @@ a {
 	font-size: 38px;
 	font-weight: 600;
 	text-align: center;
+	width: 400px;
 	margin-top: 50px;
 	margin-left: 50px;
-	padding: 25px;
+	padding: 25px 0;
 	position: absolute;
 	z-index: 2;
 }
@@ -200,7 +219,149 @@ a {
 	z-index: 1;
 }
 .photo-massage {
+	width: 1200px;
 	height: auto;
-	width: 1300px;
 	filter: brightness(0.8);
+}
+#about-us {
+	height: 750px;
+	background-color: hsl(200, 80%, 35%);
+}
+@media (max-width: 1250px) and (min-width: 1050px) {
+	/* style on the tablet horizontally with width 1000px */
+	.container {
+		width: 1000px;
+	}
+	header {
+		width: 1000px;
+	}
+	.photo-massage {
+		width: 1000px;
+	}
+}
+@media (max-width: 1050px) and (min-width: 800px) {
+	/* style on the tablet vertically with width 750px */
+	.container {
+		width: 750px;
+	}
+	header {
+		width: 750px;
+	}
+	.photo-massage {
+		width: 750px;
+	}
+}
+@media (max-width: 800px) and (min-width: 650px) {
+	/* style on the phone horizontally with width 600px */
+	.container {
+		width: 600px;
+	}
+	header {
+		width: 600px;
+	}
+	.nav-button {
+		display: block;
+	}
+	.nav-button:hover {
+		background-color: hsl(200, 80%, 20%);
+		border-radius: 5px;
+	}
+	nav ul {
+		position: absolute;
+		right: 10px;
+		top: 90px;
+		width: 150px;
+		background-color: hsl(200, 80%, 35%);
+		border-radius: 5px;
+		flex-direction: column;
+		text-align: center;
+		box-shadow: 0px 0px 10px 0px hsl(200, 80%, 20%);
+		padding: 0px;
+		display: none;
+	}
+	nav ul li {
+		padding: 10px;
+	}
+	nav ul li:hover {
+		background-color: hsl(200, 80%, 20%);
+		border-radius: 5px;
+	}
+	nav ul li a {
+		color: hsl(0, 50%, 100%);
+		width: 100%;
+		height: 100%;
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+	}
+	.nav-button:focus + ul {
+		display: block;
+	}
+	.welcome-text {
+		font-size: 26px;
+		width: 300px;
+		padding: 20px 0;
+	}
+	.photo-massage {
+		width: 600px;
+	}
+}
+@media (max-width: 650px) {
+	/* style on the phone vertically with width 300px */
+	.container {
+		width: 400px;
+	}
+	header {
+		width: 400px;
+		height: 130px;
+		font-size: 16px;
+	}
+	.phone-icon-container {
+		width: 25px;
+		height: 25px;
+	}
+	.nav-button {
+		display: block;
+	}
+	.nav-button:hover {
+		background-color: hsl(200, 80%, 20%);
+		border-radius: 5px;
+	}
+	nav ul {
+		position: absolute;
+		right: 10px;
+		top: 90px;
+		width: 150px;
+		background-color: hsl(200, 80%, 35%);
+		border-radius: 5px;
+		flex-direction: column;
+		text-align: center;
+		box-shadow: 0px 0px 10px 0px hsl(200, 80%, 20%);
+		padding: 0px;
+		display: none;
+	}
+	nav ul li {
+		padding: 10px;
+	}
+	nav ul li:hover {
+		background-color: hsl(200, 80%, 20%);
+		border-radius: 5px;
+	}
+	nav ul li a {
+		color: hsl(0, 50%, 100%);
+		width: 100%;
+		height: 100%;
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+	}
+	.nav-button:focus + ul {
+		display: block;
+	}
+	.welcome-text {
+		display: none;
+	}
+	.photo-massage {
+		max-width: 400px;
+	}
 }
